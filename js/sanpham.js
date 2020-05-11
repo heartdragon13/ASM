@@ -92,6 +92,7 @@ function laySanPhamTheoId(idSanPham) {
     return sanPham;
 }
 
+
 function layDanhSachSanPhamTuLocalStorage() {
     var jsonDanhSachSanPham = localStorage.getItem('danhSachSanPham');
 

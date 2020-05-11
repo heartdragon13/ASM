@@ -30,27 +30,4 @@ function themSanPhamVaoGioHang(idSanPham,gioHang){
     return gioHangSauKhiDuocThem;
 }
 
-/* 
-function layGioHangTuLocalStorage(){
-    var gioHang =new Array();
-    var jsonGioHang=localStorage.getItem('gioHang')
 
-    if(jsonGioHang!=null){
-        gioHang=JSON.parse(jsonGioHang);
-    }
-    return gioHang;
-}
-
-function themSanPhamVaoGioHang(idSanPham,gioHang){
-    var gioHangSauKhiDuocThem=gioHang;
-    var itemGioHang=taoDoiTuongItemGioHang(idSanPham,1);
-
-    gioHangSauKhiDuocThem.push(itemGioHang);
-    return gioHangSauKhiDuocThem;
-}
-
-function luuGioHangVaoLocalStorage(gioHang){
-    var jsonGioHang=JSON.stringify(gioHang);
-    localStorage.getItem('gioHang',jsonGioHang);
-}
- */
