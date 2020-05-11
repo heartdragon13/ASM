@@ -60,6 +60,7 @@ function chuyenDanhSachDoiTuongSanPhamThanhHTML(danhSachSanPham) {
 
 function chuyenDoiTuongSanPhamThanhHTML(sanPham) {
     sanPham = taoDoiTuongSanPham(sanPham.hinhAnh, sanPham.ten, sanPham.giaGoc, sanPham.phanTramGiamGia, sanPham.khuVuc, sanPham.id)
+
     var html = '';
     html += '<div class="item">'
     html += "      <div class='khung-pham-tram'>  "
@@ -88,6 +89,7 @@ function laySanPhamTheoId(idSanPham) {
             sanPham = sanPhamHienTai;
         }
     }
+    console.log(sanPham);
     sanPham = taoDoiTuongSanPham(sanPham.hinhAnh, sanPham.ten, sanPham.giaGoc, sanPham.phanTramGiamGia, sanPham.khuVuc, sanPham.id);
     return sanPham;
 }

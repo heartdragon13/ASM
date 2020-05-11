@@ -42,7 +42,10 @@
 
         }
 
-
+        .gio-hang img{
+            height: 50px;
+            width: 50px;
+        }
 
         .item-gio-hang {
             display: flex;
@@ -53,6 +56,7 @@
         .gio-hang .tieuDeItemGioHang {
             margin-bottom: 20px;
             font-weight: 600;
+            margin-left: 50px;
         }
 
         .item-gio-hang .hinhAnh img {
@@ -386,6 +390,8 @@
 
             var sanPham = laySanPhamTheoId(itemGioHang.idSanPham);
             
+            
+            
             var tongTien = itemGioHang.soLuong * sanPham.tinhGiaBan();
 
             var html = '   <div class="item-gio-hang">  ' +
@@ -405,6 +411,7 @@
                 '          </div>  ';
             return html;
         }
+        
         function chuyenDanhSachItemGioHangSangHTML(danhSachItemGioHang) {
             var htmlTong = "";
             for (var i = 0; i < danhSachItemGioHang.length; i++) {

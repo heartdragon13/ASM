@@ -245,8 +245,7 @@
 
         var jsonDanhSachSanPham = localStorage.getItem('danhSachSanPham');
         var danhSachSanPham = taoDoiTuongSanPham().fromJsons(jsonDanhSachSanPham);
-        console.log(danhSachSanPham);
-
+        var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
         var HTML = chuyenDanhSachDoiTuongSanPhamThanhHTML(danhSachSanPham);
 
         var nodeProducts = document.getElementById('products');
