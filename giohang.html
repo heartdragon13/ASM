@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <script src="https://kit.fontawesome.com/f20d460fd9.js" crossorigin="anonymous"></script>
+    <script src="js/sanpham.js"></script>
+    <script src="js/giohang.js"></script>
+    <script src="js/hotro.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        input {
+            padding: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .gio-hang {
+            max-width: 1100px;
+            border: 1px solid #ddd;
+            box-shadow: 2px 2px 4px #ddd;
+            margin: auto;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .gio-hang .tieuDe {
+            font-size: 20px;
+            color: #F7452E;
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .item-gio-hang {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .gio-hang .tieuDeItemGioHang {
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .item-gio-hang .hinhAnh img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .item-gio-hang .hinhAnh {
+            width: 60px;
+        }
+
+        .item-gio-hang input {
+            width: 100%;
+        }
+
+        .item-gio-hang .hinhAnh,
+        .soLuong,
+        .tongTien,
+        .hanhDong {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .item-gio-hang .gia {
+            flex: 2;
+        }
+
+        .item-gio-hang .ten {
+            flex: 3;
+        }
+
+        .item-gio-hang .gia .giaGoc {
+            font-size: 12px;
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        .item-gio-hang .gia .giaBan {
+            color: #f7452e;
+        }
+
+        .item-gio-hang .hanhDong {
+            color: black;
+        }
+
+        .item-gio-hang .hanhDong i:hover {
+            color: #f7452e;
+        }
+
+        .thong-tin {
+            width: 30%;
+            padding: 1px solid #ddd;
+            box-shadow: 2px 2px 4px #ddd;
+            padding: 30px;
+            margin: auto;
+            margin-top: 50px;
+            background-color: gainsboro;
+        }
+
+        .thong-tin .btn {
+            background-color: #f15a25;
+            color: white;
+            width: 100%;
+            display: block;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .thong-tin label {
+            width: 100%;
+            display: block;
+            margin-top: 20px;
+        }
+
+        .thong-tin input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            width: 100%;
+            display: block;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+
+        i:hover {
+            color: red;
+
+        }
+
+        .error {
+            font-size: 12px;
+            color: red;
+            font-style: italic;
+            margin-top: 12px;
+            line-height: 12px;
+            height: 12px;
+        }
+    </style>
+</head>
+
+
+</div>
+
+<body>
+    <div id="top-head">
+        <div class="inner">
+            <div class="inner-left">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt=""></a>
+                </div>
+                <div class="uy-tin">
+                    <img src="images/giaohang.png" width="130" height="40" alt="">
+
+                </div>
+            </div>
+            <div class="timkiem">
+                <input type="text" placeholder="Search...">
+                <div class="kinh">
+                    <button class="search-button">
+                        <img src="images/search.png" height="30" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="hcare">
+                <a href="themsanpham.html"><img src="images/hcare.png" alt=""></a>
+            </div>
+            <div class="tongdai">
+                <a href="#"><img src="images/tongdai.PNG" alt=""></a>
+            </div>
+        </div>
+
+
+    </div>
+
+    </div>
+    <nav id="nav-bar">
+        <ul class="menu-level-1">
+            <li class="item-level-1">
+                <a href="index.html" class="item-level-1-title">Điện thoại</a>
+                <ul class="menu-level-2">
+                    <li class="item-level-2">
+                        <a href="#" class="item-level-2-title">Apple</a>
+                    </li>
+                    <li class="item-level-2">
+                        <a href="#" class="item-level-2-title">Samsung</a>
+                    </li>
+                    <li class="item-level-2">
+                        <a href="#" class="item-level-2-title">Nokia</a>
+                    </li>
+                    <li class="item-level-2">
+                        <a href="#" class="item-level-2-title">Xiaomi</a>
+                    </li>
+                    <li class="item-level-2">
+                        <a href="#" class="item-level-2-title">Oppo</a>
+                    </li>
+                    <li class="item-level-2">
+                        <a href="#" class="item-level-2-title">Sony</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="item-level-1">
+                <a href="#" class="item-level-1-title">Tablet</a>
+            </li>
+            <li class="item-level-1">
+                <a href="#" class="item-level-1-title">Phụ kiện</a>
+                <ul class="menu-level-2">
+                    <li class="item-level-2">
+                        <a href="#" class="item-level-2-title">Cáp</a>
+                    </li>
+                    <li class="item-level-2">
+                        <a href="#" class="item-level-2-title">Tai nghe</a>
+                    </li>
+                    <li class="item-level-2">
+                        <a href="#" class="item-level-2-title">Loa di động</a>
+                    </li>
+                    <li class="item-level-2">
+                        <a href="#" class="item-level-2-title">Thẻ nhớ</a>
+                    </li>
+                    <li class="item-level-2">
+                        <a href="#" class="item-level-2-title">Pin dự phòng</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="item-level-1">
+                <a href="index.html" class="item-level-1-title">Đồng hồ thông minh</a>
+            </li>
+            <li class="item-level-1">
+                <a href="index.html" class="item-level-1-title">Máy cũ</a>
+            </li>
+            <li class="item-level-1">
+                <a href="index.html" class="item-level-1-title">Dịch vụ</a>
+            </li>
+            <li class="item-level-1">
+                <a href="index.html" class="item-level-1-title">Tin tức</a>
+            </li>
+            <li class="item-level-1">
+                <a href="index.html" class="item-level-1-title">Sim số</a>
+            </li>
+            <li class="item-level-1">
+                <a href="index.html" class="item-level-1-title">Trả góp</a>
+            </li>
+            <li class="item-level-1">
+                <a href="giohang.html"><i class="fas fa-cart-plus"></i></a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="gio-hang" id="gio-hang">
+        <h1 class="tieuDe">Danh sách sản phẩm</h1>
+        <div class="item-gio-hang tieuDeItemGioHang">
+            <div class="hinhanh">
+            </div>
+            <p class="ten">Tên sản phẩm</p>
+            <div class="gia">
+                Đơn giá
+            </div>
+            <p event class="soLuong">Số lượng</p>
+            <p class="tongTien">Tổng tiền</p>
+            <div class="hanhDong">
+                <p>Thao Tác</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="thongTinKhachHang">
+
+        <div class="thong-tin">
+            <label for="hoTen">Họ và Tên</label>
+            <input type="text" id="hoTen">
+            <label id="hienThiLoiHoTen" for="hoTen" class="error"></label>
+
+            <label for="diaChi">Địa chỉ</label>
+            <input type="text" id="diaChi">
+            <label id="hienThiLoiDiaChi" for="diaChi" class="error"></label>
+
+            <label for="soDienThoai">Số Điện Thoại</label>
+            <input type="number" id="soDienThoai">
+            <label id="hienThiLoiSoDienThoai" for="soDienThoai" class="error"></label>
+
+            <label for="soCMND">Số CMND</label>
+            <input type="number" id="soCMND">
+            <label id="hienThiLoiSoCMND" for="soCMND" class="error"></label>
+
+            <button onclick="onClickMuaHang()" class="btn">Mua Hàng</button>
+        </div>
+    </div>
+
+    <footer>
+        Copyright by @ElectricMarket 2002
+    </footer>
+
+    <script>
+        function onClickMuaHang() {
+            if (formMuaHangHopLe() == true) {
+                alert('Mua Thành Công')
+            }
+        }
+        function formMuaHangHopLe() {
+            var hopLe = true;
+
+            var nodeHoTen = document.getElementById('hoTen');
+            var nodeDiaChi = document.getElementById('diaChi');
+            var nodeSoDienThoai = document.getElementById('soDienThoai');
+            var nodeSoCMND = document.getElementById('soCMND');
+
+            var hoTen = nodeHoTen.value;
+            var diaChi = nodeDiaChi.value;
+            var soDienThoai = nodeSoDienThoai.value;
+            var soCMND = nodeSoCMND.value;
+
+            var nodeHienThiLoiHoTen = document.getElementById('hienThiLoiHoTen');
+            var nodeHienThiLoiDiaChi = document.getElementById('hienThiLoiDiaChi');
+            var nodeHienThiLoiSoDienThoai = document.getElementById('hienThiLoiSoDienThoai');
+            var nodeHienThiLoiSoCMND = document.getElementById('hienThiLoiSoCMND');
+
+            nodeHienThiLoiHoTen.innerHTML = '';
+            nodeHienThiLoiDiaChi.innerHTML = '';
+            nodeHienThiLoiSoDienThoai.innerHTML = '';
+            nodeHienThiLoiSoCMND.innerHTML = '';
+
+            if (hoTen == '') {
+                nodeHienThiLoiHoTen.innerHTML = 'Họ và tên không được để trống';
+                hopLe = false;
+            } else if ((hoTen.length < 5) || (hoTen.length > 20)) {
+                nodeHienThiLoiHoTen.innerHTML = 'Họ và tên phải nhập hơn 5 và trên 20 kí tự';
+                hopLe = false;
+            }
+
+            if (diaChi == '') {
+                nodeHienThiLoiDiaChi.innerHTML = 'Địa chỉ không được để trống';
+                hopLe = false;
+            } else if ((diaChi.length < 5) || (diaChi.length > 20)) {
+                nodeHienThiLoiDiaChi.innerHTML = 'Địa chỉ phải nhập hơn 5 và trên 20 kí tự';
+                hopLe = false;
+            }
+
+            if (soDienThoai == '') {
+                nodeHienThiLoiSoDienThoai.innerHTML = 'Số điện thoại không được bỏ trống';
+                hopLe = false;
+            } else if ((soDienThoai.length < 10) || (soDienThoai.length > 9)) {
+                nodeHienThiLoiSoDienThoai.innerHTML = 'Số điện thoại phải là 10 số';
+                hopLe = false;
+            }
+
+            if (soCMND == '') {
+                nodeHienThiLoiSoCMND.innerHTML = 'Số CMND không được bỏ trống';
+                hopLe = false;
+            } else if ((soCMND.length < 9)||(soCMND.length>9)) {
+                nodeHienThiLoiSoCMND.innerHTML = 'Số CMND phải là 9 số';
+                hopLe = false;
+            }
+
+
+
+            return hopLe;
+
+        }
+        
+        hienThiDanhSachItemGioHang();
+        function hienThiDanhSachItemGioHang() {
+            
+            var danhSachItemGioHang = layDanhSachItemGioHang();
+
+            var HTML = chuyenDanhSachItemGioHangSangHTML(danhSachItemGioHang);
+
+            var nodeGioHang = document.getElementById('gio-hang');
+            nodeGioHang.innerHTML = nodeGioHang.innerHTML + HTML;
+        }
+
+        function chuyenDoiTuongItemGioHangSangHTML(itemGioHang) {
+
+            var sanPham = laySanPhamTheoId(itemGioHang.idSanPham);
+
+
+            var tongTien = itemGioHang.soLuong * sanPham.tinhGiaBan();
+
+            var html = '   <div class="item-gio-hang">  ' +
+                '               <div class="hinh-anh">  ' +
+                '                   <img src="' + sanPham.hinhAnh + '">  ' +
+                '               </div>  ' +
+                '               <p class="ten">' + sanPham.ten + '</p>  ' +
+                '               <div class="gia">  ' +
+                '                   <span class="giaGoc">' + sanPham.giaGoc + 'đ</span>  ' +
+                '                   <span class="giaBan">' + sanPham.tinhGiaBan() + 'đ</span>  ' +
+                '               </div>  ' +
+                '               <input type="number" class="soLuong" value="' + itemGioHang.soLuong + '">  ' +
+                '               <p class="tongTien">' + tongTien + 'đ</p>  ' +
+                '               <div class="hanhDong">  ' +
+                '                   <i class="far fa-trash-alt"></i>  ' +
+                '               </div>  ' +
+                '          </div>  ';
+            return html
+        }
+        function chuyenDanhSachItemGioHangSangHTML(danhSachItemGioHang) {
+            var htmlTong = "";
+            for (var i = 0; i < danhSachItemGioHang.length; i++) {
+                var html = chuyenDoiTuongItemGioHangSangHTML(danhSachItemGioHang[i]);
+                htmlTong = htmlTong + html;
+            }
+            return htmlTong;
+        }
+        function hienThiGioHang() {
+            var danhSachItemGioHang = layGioHangTuLocalStorage();
+            var html = chuyenDanhSachItemGioHangSangHTML(danhSachItemGioHang);
+            var nodeGioHang = document.getElementById('gio-hang');
+            nodeGioHang.innerHTML = html;
+        }
+
+    </script>
+</body>
+
+</html>

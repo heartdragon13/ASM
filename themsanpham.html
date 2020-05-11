@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm mới sản phẩm</title>
+    <script src="js/sanpham.js"></script>
+    <script src="js/hotro.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .them-san-pham {
+            width: 30%;
+            margin: auto;
+            margin-top: 30px;
+            border: 1px solid #ddd;
+            box-shadow: 1px 2px 4px #ddd;
+            padding: 40px;
+            box-shadow: 2px 2px 5px gray;
+            background-color: gainsboro;
+        }
+
+        .them-san-pham label {
+            font-size: 16px;
+            width: 100%;
+            display: block;
+            line-height: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+
+        }
+
+        .them-san-pham input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        .them-san-pham .btn {
+            padding: 10px 20px;
+            width: 100%;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f15a25;
+            color: #ddd;
+        }
+
+        .them-san-pham .error {
+            font-size: 12px;
+            color: red;
+            font-style: italic;
+            height: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="top-head">
+        <div class="inner">
+            <div class="inner-left">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt=""></a>
+                </div>
+                <div class="uy-tin">
+                    <img src="images/giaohang.png" width="130" height="40" alt="">
+
+                </div>
+            </div>
+            <div class="timkiem">
+                <input type="text" placeholder="Search...">
+                <div class="kinh">
+                    <button class="search-button">
+                        <img src="images/search.png" height="30" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="hcare">
+                <a href="themsanpham.html"><img src="images/hcare.png" alt=""></a>
+            </div>
+            <div class="tongdai">
+                <a href="#"><img src="images/tongdai.PNG" alt=""></a>
+            </div>
+        </div>
+
+
+    </div>
+
+    </div>
+    <nav id="nav-bar">
+        <ul class="menu-level-1">
+            <li class="item-level-1">
+                <a href="index.html" class="item-level-1-title">Điện thoại</a>
+                <ul class="menu-level-2">
+                    <li class="item-level-2">
+                        <a href="#" class="item-level-2-title">Apple</a>
+                    </li>
+                    <li class="item-level-2">
+                        <a href="#" class="item-level-2-title">Samsung</a>
+                    </li>
+                    <li class="item-level-2">
+                        <a href="#" class="item-level-2-title">Nokia</a>
+                    </li>
+                    <li class="item-level-2">
+                        <a href="#" class="item-level-2-title">Xiaomi</a>
+                    </li>
+                    <li class="item-level-2">
+                        <a href="#" class="item-level-2-title">Oppo</a>
+                    </li>
+                    <li class="item-level-2">
+                        <a href="#" class="item-level-2-title">Sony</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="item-level-1">
+                <a href="#" class="item-level-1-title">Tablet</a>
+            </li>
+            <li class="item-level-1">
+                <a href="#" class="item-level-1-title">Phụ kiện</a>
+                <ul class="menu-level-2">
+                    <li class="item-level-2">
+                        <a href="#" class="item-level-2-title">Cáp</a>
+                    </li>
+                    <li class="item-level-2">
+                        <a href="#" class="item-level-2-title">Tai nghe</a>
+                    </li>
+                    <li class="item-level-2">
+                        <a href="#" class="item-level-2-title">Loa di động</a>
+                    </li>
+                    <li class="item-level-2">
+                        <a href="#" class="item-level-2-title">Thẻ nhớ</a>
+                    </li>
+                    <li class="item-level-2">
+                        <a href="#" class="item-level-2-title">Pin dự phòng</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="item-level-1">
+                <a href="index.html" class="item-level-1-title">Đồng hồ thông minh</a>
+            </li>
+            <li class="item-level-1">
+                <a href="index.html" class="item-level-1-title">Máy cũ</a>
+            </li>
+            <li class="item-level-1">
+                <a href="index.html" class="item-level-1-title">Dịch vụ</a>
+            </li>
+            <li class="item-level-1">
+                <a href="index.html" class="item-level-1-title">Tin tức</a>
+            </li>
+            <li class="item-level-1">
+                <a href="index.html" class="item-level-1-title">Sim số</a>
+            </li>
+            <li class="item-level-1">
+                <a href="index.html" class="item-level-1-title">Trả góp</a>
+            </li>
+            <li class="item-level-1">
+                <a href="themvaogiohang.html"></a><i class="fas fa-cart-plus"></i></a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="them-san-pham">
+        <label for="hinhAnh">Hình ảnh sản phẩm</label>
+        <input type="text" id="hinhAnh">
+        <label for="hinhAnh" class="error" id="hienThiLoiHinhAnh"></label>
+
+        <label for="ten">Tên sản phẩm</label>
+        <input type="text" id="ten">
+        <label for="ten" class="error" id="hienThiLoiTen"></label>
+
+        <label for="giaGoc">Giá gốc</label>
+        <input type="number" id="giaGoc">
+        <label for="ten" class="error" id="hienThiLoiGiaGoc"></label>
+
+        <label for="phanTramGiamGia">Giảm giá(%) - Giá trị 0 - 1</label>
+        <input type="number" id="phanTramGiamGia">
+        <label for="ten" class="error" id="hienThiLoiPhanTramGiamGia"></label>
+
+        <label for="khuVuc">Khu vực bán</label>
+        <input type="text" id="khuVuc">
+        <label for="ten" class="error" id="hienThiLoiKhuVuc"></label>
+
+        <button onclick="onclickTaoSanPham()" class="btn">Tạo sản phẩm</button>
+    </div>
+    <script>
+
+        function kiemTraHopLeFormTaoSanPham() {
+            var hople = true;
+
+            var nodeHinhAnh = document.getElementById('hinhAnh');
+            var nodeTen = document.getElementById('ten');
+            var nodeGiaGoc = document.getElementById('giaGoc');
+            var nodePhanTramGiamGia = document.getElementById('phanTramGiamGia');
+            var nodeKhuVuc = document.getElementById('khuVuc');
+
+            var hinhAnh = nodeHinhAnh.value;
+            var ten = nodeTen.value;
+            var giaGoc = nodeGiaGoc.value;
+            var phanTramGiamGia = nodePhanTramGiamGia.value;
+            var khuVuc = nodeKhuVuc.value;
+
+            var nodeHienThiLoiHinhAnh = document.getElementById('hienThiLoiHinhAnh');
+            var nodeHienThiLoiTen = document.getElementById('hienThiLoiTen');
+            var nodeHienThiLoiGiaGoc = document.getElementById('hienThiLoiGiaGoc');
+            var nodeHienThiLoiPhanTramGiamGia = document.getElementById('hienThiLoiPhanTramGiamGia');
+            var nodeHienThiLoiKhuVuc = document.getElementById('hienThiLoiKhuVuc');
+
+            nodeHienThiLoiHinhAnh.innerHTML = '';
+            nodeHienThiLoiTen.innerHTML = '';
+            nodeHienThiLoiGiaGoc.innerHTML = '';
+            nodeHienThiLoiPhanTramGiamGia.innerHTML = '';
+            nodeHienThiLoiKhuVuc.innerHTML = '';
+
+
+            if (hinhAnh == null || hinhAnh == 0) {
+                hople = false;
+                nodeHienThiLoiHinhAnh.innerHTML = 'Hình ảnh không được bỏ trống!';
+            }
+            if (ten == null || ten == 0) {
+                hople = false;
+                nodeHienThiLoiTen.innerHTML = 'Tên không được bỏ trống!';
+            }
+            if (giaGoc == null || giaGoc == 0) {
+                hople = false;
+                nodeHienThiLoiGiaGoc.innerHTML = 'Giá không được bỏ trống!';
+            }
+            if (phanTramGiamGia == null || phanTramGiamGia == 0) {
+                hople = false;
+                nodeHienThiLoiPhanTramGiamGia.innerHTML = 'Phầm trăm giảm không được bỏ trống!';
+            } else if ((phanTramGiamGia < 0) || (phanTramGiamGia > 1)) {
+                hopLe = false;
+                nodeHienThiLoiPhanTramGiamGia.innerHTML = 'Phần trăm giảm giá chỉ trong khoảng giá trị 0 - 1';
+            }
+            if (khuVuc == null || khuVuc == 0) {
+                hople = false;
+                nodeHienThiLoiKhuVuc.innerHTML = 'Khu vực không được bỏ trống!';
+            }
+
+            return hople;
+        }
+
+        function onclickTaoSanPham() {
+
+            if (kiemTraHopLeFormTaoSanPham() == true) {
+                var sanPham = taoDoiTuongTuInput();
+                console.log(sanPham);
+                alert('Đã thêm sản phẩm mới')
+
+                var jsonDanhSachSanPham = localStorage.getItem('danhSachSanPham');
+                var danhSachSanPham = JSON.parse(jsonDanhSachSanPham);
+                console.log("danh sach san pham cu la " + danhSachSanPham)
+                if (danhSachSanPham == null) {
+                    danhSachSanPham = new Array();
+                }
+
+                danhSachSanPham.push(sanPham);
+                console.log("danh sach moi la");
+                console.log(danhSachSanPham);
+
+                var jsonDanhSachSanPham = JSON.stringify(danhSachSanPham);
+                localStorage.setItem('danhSachSanPham', jsonDanhSachSanPham);
+
+            }
+
+
+
+        }
+        function taoDoiTuongTuInput() {
+            var nodeHinhAnh = document.getElementById('hinhAnh');
+            var hinhAnh = nodeHinhAnh.value;
+            console.log("hinh anh " + hinhAnh);
+
+
+
+            var nodeTen = document.getElementById('ten');
+            var ten = nodeTen.value;
+            console.log("Ten " + ten);
+
+
+            var nodeGiaGoc = document.getElementById('giaGoc');
+            var giaGoc = parseInt(nodeGiaGoc.value);
+            console.log("gia goc " + giaGoc);
+
+
+            var nodePhanTramGiamGia = document.getElementById('phanTramGiamGia');
+            var phanTramGiamGia = parseFloat(nodePhanTramGiamGia.value);
+            console.log("Phan tram giam gia " + phanTramGiamGia);
+
+
+            var nodeKhuVuc = document.getElementById('khuVuc');
+            var khuVuc = nodeKhuVuc.value;
+            console.log("Khu vuc " + khuVuc);
+
+            var sanPham = taoDoiTuongSanPham(hinhAnh, ten, giaGoc, phanTramGiamGia, khuVuc, null);
+            console.log(sanPham);
+            return sanPham;
+
+        }
+
+    </script>
+</body>
+
+</html>
